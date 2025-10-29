@@ -1,0 +1,1145 @@
+@import "./abstracts/mixins.scss";
+
+body {
+  font-family: "Niramit", serif;
+  font-optical-sizing: auto;
+  background-color: #ebe9e9;
+  position: relative;
+  z-index: -1;
+}
+
+$dark-blue: #0b2148;
+$light-blue: #48a9a6;
+$main-red: #741816;
+$yellow: #ffc928;
+$useful-links: #fbf7ed;
+$white: #fff;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+#announcementsCarousel {
+  background-color: $dark-blue;
+  color: $white;
+  text-align: center;
+  padding: 0.6rem;
+  h6 {
+    font-size: 0.85rem;
+    width: 80%;
+    margin: 0 auto;
+    @include breakpoint($lg) {
+      font-size: 1rem;
+      width: 100%;
+    }
+  }
+}
+
+.custom-navbar {
+  .navbar-brand {
+    img {
+      height: 59px;
+    }
+  }
+  .container-fluid {
+    @include breakpoint($lg) {
+      max-width: 95%;
+    }
+    @include breakpoint($xl) {
+      max-width: 90%;
+    }
+  }
+  .navbar-nav {
+    .nav-item {
+      font-weight: 600;
+      margin-right: 0.5rem;
+      @include breakpoint($lg) {
+        margin-right: 1rem;
+      }
+    }
+    .contact {
+      background-color: $yellow;
+      position: relative;
+      @include breakpoint($sm-only) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+      }
+      @include breakpoint($lg) {
+        margin-left: 1.5rem;
+      }
+      &::before {
+        @include breakpoint($md) {
+          content: "";
+          background-color: $yellow;
+          position: absolute;
+          top: -1.4rem;
+          left: -0.7rem;
+          height: 85px;
+          width: 100px;
+          z-index: 1;
+          // height: 94px;
+          // top: -1.7rem;
+          left: -0.4rem;
+          width: 95px;
+        }
+        @include breakpoint($lg) {
+          top: -1.4rem;
+          left: -1.5rem;
+          width: 130px;
+          height: 85px;
+        }
+      }
+      a {
+        position: relative;
+        z-index: 3;
+        color: #000;
+        @include breakpoint($sm-only) {
+          text-align: center;
+        }
+      }
+    }
+  }
+  &__social {
+    @include breakpoint($md) {
+      a {
+        img {
+          height: 35px;
+        }
+      }
+    }
+    @include breakpoint($lg) {
+      margin-left: 1.5rem;
+      a {
+        img {
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  background-color: $main-red;
+  background-image: url("../img/hero-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: $white;
+  padding: 2rem 0;
+  @include breakpoint($md) {
+    height: 600px;
+  }
+  .container {
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  h6 {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    @include breakpoint($md) {
+      margin-top: 0;
+    }
+    @include breakpoint($lg) {
+      font-size: 1.3rem;
+    }
+  }
+  h2 {
+    font-weight: 800 !important;
+    @include breakpoint($lg) {
+      width: 90%;
+      font-size: 2.8rem;
+    }
+  }
+  p {
+    font-weight: 200;
+    margin: 1rem 0;
+    @include breakpoint($lg) {
+      margin: 2rem 0;
+      width: 80%;
+    }
+  }
+  &__cta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    @include breakpoint($sm-only) {
+      flex-direction: column;
+    }
+    a {
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      color: $white;
+      font-size: 1.1rem;
+      &:first-of-type {
+        background-color: $yellow;
+        color: $dark-blue;
+        padding: 1.1rem 2rem;
+        font-weight: bold;
+        border-radius: 5px;
+        @include breakpoint($sm-only) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.main-content {
+  background-image: url("../img/body-bg.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 9;
+  padding-top: 2rem;
+}
+
+.courses {
+  padding: 1rem 0;
+  @include breakpoint($lg) {
+    margin-top: -4rem;
+    padding: 0;
+  }
+  &__card {
+    text-align: center;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 236px;
+    margin-top: 1rem;
+    &:not(:first-child) {
+    }
+    @include breakpoint($lg) {
+      margin-top: 0;
+      width: 90%;
+    }
+    h3 {
+      width: 90%;
+      margin: 0.5rem auto;
+      @include breakpoint($lg) {
+        font-size: 1.8rem;
+      }
+    }
+    img {
+      transition: all 0.2s ease-in;
+    }
+    a {
+      color: $white;
+      text-decoration: none;
+      font-size: 1.3rem;
+      @include breakpoint($lg) {
+        &:hover {
+          img {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+    // img {
+    //   &:first-child {
+
+    //   }
+    // }
+    &__image {
+      height: 60px;
+    }
+  }
+}
+
+.about {
+  position: relative;
+  padding: 2rem 0;
+  @include breakpoint($lg) {
+    background-image: url("../img/body-bg.png");
+    background-size: cover;
+    background-position: center;
+    padding: 7rem 0 10rem 0;
+  }
+  h3 {
+    color: $dark-blue;
+    font-size: 2rem;
+    @include breakpoint($lg) {
+      font-size: 2.8rem;
+      width: 95%;
+    }
+  }
+  h6 {
+    color: $light-blue;
+  }
+  p {
+    margin: 1.3rem 0;
+    text-align: justify;
+    @include breakpoint($lg) {
+      width: 90%;
+    }
+  }
+  &__perks {
+    @include breakpoint($lg) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    p {
+      margin: 1rem 0;
+      font-weight: 600;
+      font-size: 1.1rem;
+      @include breakpoint($lg) {
+        font-size: 1rem;
+        margin: 0;
+      }
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+  &-img {
+    margin: 0 auto 2rem auto;
+    @include breakpoint($lg) {
+      margin-top: -3rem;
+      height: min-content;
+    }
+  }
+  &__cta {
+    a {
+      background-color: $yellow;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $dark-blue;
+      text-decoration: none;
+      border-radius: 5px;
+      padding: 0.4rem 1rem;
+      margin-top: 2rem;
+      font-weight: 600;
+      font-size: 1.3rem;
+      @include breakpoint($lg) {
+        width: max-content;
+      }
+    }
+  }
+  &__stats {
+    background-color: $dark-blue;
+    color: $white;
+    padding: 1rem;
+    @include breakpoint($lg) {
+      padding: 1rem;
+      position: absolute;
+      bottom: 4rem;
+      right: 7.5rem;
+      width: 19.8%;
+    }
+    h3 {
+      color: $white !important;
+      font-size: 1.4rem;
+    }
+    h4 {
+      font-size: 3rem;
+    }
+    p {
+      margin: 1rem 0;
+    }
+  }
+}
+
+.services {
+  // margin-top: 4rem;
+  &__header {
+    background-color: $main-red;
+    background-image: url("../img/services-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    color: $white;
+    padding: 2rem 0 3.5rem 0;
+    @include breakpoint($lg) {
+      height: 230px;
+      padding: 2rem 0;
+    }
+    h2 {
+      font-size: 1.8rem;
+      @include breakpoint($md) {
+        font-size: 3rem;
+      }
+    }
+    p {
+      text-align: justify;
+      opacity: 0.7;
+      margin-top: 1rem;
+      @include breakpoint($md) {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  &__cards {
+    margin-top: -1.5rem;
+    @include breakpoint($lg) {
+      margin-top: -2.5rem;
+    }
+  }
+  &__card {
+    background-color: $white;
+    height: 100%;
+    padding: 1.2rem 1rem;
+    @include breakpoint($md) {
+      padding: 1.3rem;
+    }
+    h5 {
+      margin: 0.6rem 0;
+    }
+    p {
+      text-align: justify;
+    }
+  }
+}
+
+.useful-links {
+  position: relative;
+  padding: 3rem 0;
+  @include breakpoint($lg) {
+    padding: 4.5rem;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $useful-links;
+    z-index: -1;
+    height: 600px;
+    width: 95%;
+    @include breakpoint($md) {
+      transform: none;
+      bottom: unset;
+      top: 2em;
+      left: 5.5rem;
+      height: 550px;
+      width: 460px;
+    }
+    @include breakpoint($lg) {
+      top: 6rem;
+      left: 7rem;
+      height: 600px;
+      width: 667px;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 4rem;
+    left: 6rem;
+    background-color: $main-red;
+    z-index: 1;
+    // height: 20px;
+    // width: 20px;
+    @include breakpoint($md) {
+      bottom: 0.5rem;
+      left: 4.5rem;
+      height: 30px;
+      width: 30px;
+    }
+    @include breakpoint($lg) {
+      bottom: 4rem;
+      left: 6rem;
+    }
+  }
+  &__container {
+    padding: 0 1rem;
+    @include breakpoint($lg) {
+      padding: 2.5rem;
+    }
+    h4 {
+      color: $dark-blue;
+      font-size: 2rem;
+      @include breakpoint($lg) {
+        font-size: 2.8rem;
+      }
+    }
+    p {
+      margin: 0.7rem 0;
+      @include breakpoint($lg) {
+        margin: 1.25rem 0;
+      }
+    }
+  }
+  &__list {
+    a {
+      border: 1px solid rgba(6, 7, 11, 0.11);
+      border-radius: 4px;
+      display: block;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      color: $dark-blue;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+    }
+  }
+  &__media {
+    position: relative;
+    z-index: -2;
+    img {
+      height: auto;
+      width: 100%;
+      @include breakpoint($lg) {
+        margin-left: -6rem;
+        height: 630px;
+        width: auto;
+      }
+    }
+  }
+  .video-banner {
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+.hero--secondary {
+  background-image: url("../img/seconday-header-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: $white;
+  padding: 1.5rem 0;
+  @include breakpoint($lg) {
+    padding: 3rem 0;
+  }
+  &--blue {
+    background-image: url("../img/hero-background--blue.jpg");
+    p {
+      color: #48a9a6;
+    }
+  }
+}
+
+.hero--about {
+  background-image: url("../img/about-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100px;
+  @include breakpoint($lg) {
+    height: 252px;
+  }
+}
+
+.directory-files {
+  padding: 1rem 0;
+  @include breakpoint($lg) {
+    padding: 2rem 0;
+  }
+  &__menu {
+    background-color: $white;
+    @include breakpoint($lg) {
+      position: sticky;
+      top: 10px;
+      width: 95%;
+    }
+    &__header {
+      background-color: $dark-blue;
+      color: $white;
+      padding: 0.5rem;
+      @include breakpoint($md) {
+        padding: 1rem;
+      }
+    }
+    &__content {
+      a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ececec;
+        color: #000;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        padding: 0.5rem;
+        @include breakpoint($md) {
+          padding: 1rem;
+        }
+        img {
+          @include breakpoint($sm-only) {
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+  &__content {
+    &__item {
+      background-color: $white;
+      margin-top: 1rem;
+      padding: 1rem;
+      @include breakpoint($md) {
+        padding: 1.5rem;
+        margin-top: 0;
+        &:not(:first-child) {
+          margin-top: 1rem;
+        }
+      }
+      h3 {
+        font-weight: 600;
+      }
+      p {
+        margin: 1rem 0;
+        text-align: justify;
+        @include breakpoint($md) {
+          margin: 1.5rem 0;
+        }
+      }
+      a {
+        color: #00467d;
+        font-size: 1.1rem;
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+.publications {
+  padding: 1rem 0;
+  @include breakpoint($lg) {
+    padding: 2rem 0;
+  }
+  &__item {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    @include breakpoint($md) {
+      flex-direction: row;
+    }
+    &:not(:first-child) {
+      margin-top: 1rem;
+      @include breakpoint($lg) {
+        margin-top: 1.5rem;
+      }
+    }
+    & > div {
+      padding: 1rem;
+      @include breakpoint($lg) {
+        padding: 2rem;
+      }
+      h3 {
+        text-align: justify;
+      }
+      p {
+        text-align: justify;
+        margin: 0.7rem 0;
+        @include breakpoint($lg) {
+          margin: 1.5rem 0;
+          font-size: 1.1rem;
+        }
+      }
+      a {
+        color: #00467d;
+        font-size: 1.2rem;
+        font-weight: bolder;
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+.events {
+  padding: 1rem 0;
+  @include breakpoint($lg) {
+    padding: 2rem 0;
+  }
+  &__list {
+    padding: 1rem 0;
+    @include breakpoint($lg) {
+      padding: 2rem 0;
+    }
+    &__item {
+      background-color: $white;
+      height: 100%;
+      img {
+        &:first-of-type {
+          max-height: 250px;
+          width: 100%;
+        }
+      }
+      &__content {
+        padding: 1.18rem;
+        p {
+          font-size: 1.2rem;
+          margin: 0.3rem 0;
+          font-weight: 600;
+          &.label {
+            margin: 0;
+            background-color: $yellow;
+            padding: 0.3rem;
+            font-weight: bolder;
+            color: $dark-blue;
+            width: max-content;
+            font-size: 1rem;
+          }
+          span {
+            color: $main-red;
+          }
+        }
+        h5 {
+          font-size: 1.4rem;
+          margin-bottom: 1rem;
+          @include breakpoint($lg) {
+          }
+        }
+        a {
+          display: flex;
+          text-decoration: none;
+          font-size: 1.1rem;
+          img {
+            margin-right: 10px;
+            width: 14px !important;
+          }
+          &.video-call {
+            background-color: $dark-blue;
+            display: block;
+            color: $white;
+            text-align: center;
+            padding: 0.8rem 0;
+            font-weight: 700;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.masters {
+  padding: 1rem 0;
+  @include breakpoint($lg) {
+    padding: 2rem 0;
+  }
+  &__content {
+    h3 {
+      color: $main-red;
+      font-weight: 600;
+      @include breakpoint($lg) {
+        font-size: 2rem;
+      }
+    }
+    h5 {
+      font-weight: 600;
+    }
+    p {
+      text-align: justify;
+      margin: 1rem 0;
+      @include breakpoint($lg) {
+        width: 95%;
+      }
+      &.blue {
+        font-weight: 600;
+        font-synthesis: 1.1rem;
+        color: $dark-blue;
+      }
+    }
+    &__files {
+      a {
+        background: $white;
+        display: block;
+        padding: 0.8rem;
+        border: 1px solid #ebebeb;
+        margin-top: 1rem;
+        color: #00467d;
+        font-size: 1.1rem;
+        @include breakpoint($lg) {
+          width: 95%;
+        }
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  &__details {
+    background-color: $white;
+    box-shadow: 0 2px 4px 0 rgba(191, 191, 191, 0.5);
+    padding: 1rem;
+    margin-top: 1rem;
+    @include breakpoint($md) {
+      margin-top: 0;
+      position: sticky;
+      top: 10px;
+      padding: 1.8rem;
+    }
+    h5 {
+      margin-top: 1.4rem;
+      font-weight: 600;
+    }
+    p {
+      margin-top: 0.6rem;
+      font-weight: 500;
+      font-size: 1.1rem;
+      img {
+        margin-right: 10px;
+      }
+    }
+    a {
+      background-color: $yellow;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $dark-blue;
+      text-decoration: none;
+      border-radius: 5px;
+      padding: 0.4rem 1rem;
+      margin-top: 2rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      @include breakpoint($lg) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.course {
+  background-image: url("../img/secondary-bg.png");
+  background-size: cover;
+  background-position: center;
+  &__content {
+    padding: 1rem 0;
+    @include breakpoint($lg) {
+      padding: 2rem 0;
+    }
+    h4 {
+      margin-top: 1.4rem;
+      font-weight: 600;
+    }
+    p {
+      margin-top: 0.6rem;
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+    &__list {
+      margin-top: 1rem;
+      &__item {
+        background-color: $white;
+        &__media {
+          max-height: 200px;
+          overflow: hidden;
+          img {
+            width: 100%;
+          }
+        }
+        &__content {
+          padding: 1.1rem;
+          h5 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: $main-red;
+          }
+          p {
+            font-size: 1.1rem;
+            span {
+              color: $dark-blue !important;
+              margin-right: 7px;
+            }
+          }
+          a {
+            background-color: $yellow;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $dark-blue;
+            text-decoration: none;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-top: 1rem;
+            font-weight: 600;
+            font-size: 1.3rem;
+            @include breakpoint($lg) {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__presentation {
+    padding-bottom: 2rem;
+    h4 {
+      color: $main-red;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    p {
+      margin-top: 1rem;
+      text-align: justify;
+    }
+  }
+}
+
+.team {
+  padding: 1rem 0;
+  @include breakpoint($lg) {
+    padding: 2rem 0;
+  }
+  p {
+    text-align: justify;
+  }
+  &__accordion {
+    margin-top: 1rem;
+    @include breakpoint($lg) {
+      margin-top: 2rem;
+    }
+    .accordion {
+      &-item {
+        margin-top: 1rem;
+      }
+      &-body {
+        background-color: $useful-links;
+        .department-manager {
+          border-bottom: 1px solid #ebeaea;
+          padding: 1rem 0;
+          p {
+            font-size: 1.1rem;
+            span {
+              font-weight: bolder;
+            }
+          }
+          a {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            margin-top: 10px;
+            margin-right: 10px;
+            font-size: 1.1rem;
+            color: #4e4e4e;
+            img {
+              margin-right: 10px;
+            }
+          }
+        }
+        .department-sub-managers {
+          margin-top: 1rem;
+          @include breakpoint($lg) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+          }
+          .department-sub-manager {
+            background-color: $white;
+            padding: 1rem;
+            margin-top: 1rem;
+            @include breakpoint($md) {
+              margin-top: 0;
+            }
+            h5 {
+              font-weight: bolder;
+            }
+            p {
+              margin: 1rem 0;
+              span {
+                color: #4e4e4e;
+              }
+            }
+            a {
+              text-decoration: none;
+              display: inline-flex;
+              align-items: center;
+              margin-right: 10px;
+              color: #4e4e4e;
+              img {
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+      &-button {
+        background-color: $dark-blue;
+        color: $white;
+        font-size: 1.1rem;
+        font-weight: bolder;
+
+        &::after {
+          background-image: url("../img/arrow-down--short--white.svg");
+        }
+        &:not(.collapsed) {
+        }
+      }
+    }
+  }
+}
+
+.about {
+  &__banner {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 190px;
+    @include breakpoint($lg) {
+      height: 452px;
+    }
+  }
+  &__history {
+    padding: 1rem 0;
+    @include breakpoint($lg) {
+      padding: 2rem 0;
+    }
+    h6 {
+      color: #48a9a6;
+    }
+    h3 {
+      color: $dark-blue;
+      font-size: 1.7rem;
+      margin: 0.8rem 0 0.5rem 0;
+      font-weight: 600;
+      @include breakpoint($lg) {
+        font-size: 2rem;
+      }
+    }
+    p {
+      text-align: justify;
+      margin-top: 1rem;
+      @include breakpoint($md) {
+        width: 95%;
+      }
+      &.red {
+        margin-top: 0;
+        background-color: $main-red;
+        color: $white;
+        padding: 0.5rem 0.9rem;
+        width: 100%;
+      }
+    }
+  }
+  &__info {
+    padding: 1rem 0;
+    @include breakpoint($lg) {
+      padding: 2rem 0;
+    }
+    h3 {
+      color: $main-red;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    p {
+      text-align: justify;
+      @include breakpoint($lg) {
+        width: 90%;
+      }
+    }
+  }
+}
+.mission-vision {
+  position: relative;
+  padding: 2rem 0;
+  @include breakpoint($md) {
+    padding: 3.3rem;
+  }
+  &::before {
+    content: "";
+    background-color: $main-red;
+    background-image: url("../img/about-banner-bg.png");
+    background-repeat: no-repeat;
+    height: 130px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    @include breakpoint($md) {
+      height: 200px;
+    }
+  }
+  h3 {
+    color: $white;
+    font-size: 1.5rem;
+    @include breakpoint($md) {
+      font-size: 2.2rem;
+    }
+  }
+  &__cards {
+    margin-top: 2rem;
+    @include breakpoint($md) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem;
+    }
+    .mission,
+    .vision {
+      background-color: $dark-blue;
+      color: $white;
+      padding: 1rem;
+      text-align: center;
+      @include breakpoint($md) {
+        padding: 2.2rem;
+      }
+      h4 {
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        margin-bottom: 10px;
+        @include breakpoint($md) {
+          font-size: 1.8rem;
+        }
+      }
+      p {
+        font-size: 1.1rem;
+        @include breakpoint($md) {
+          text-align: justify;
+        }
+      }
+    }
+  }
+}
+.values {
+  padding: 1rem 0;
+  @include breakpoint($lg) {
+    padding: 2rem 0;
+  }
+  h3 {
+    color: #00467d;
+    font-weight: 700;
+    @include breakpoint($lg) {
+      margin-bottom: 2rem;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+    @include breakpoint($md) {
+      margin-top: 0;
+      grid-template-columns: repeat(6, 1fr);
+    }
+    &__item {
+      text-align: center;
+      h5 {
+        font-size: 1rem;
+        font-weight: 700;
+        @include breakpoint($md) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

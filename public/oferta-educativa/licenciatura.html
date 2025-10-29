@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Licenciatura</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- Custom Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="../scss/main.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Announcements Carousel -->
+      <div
+        id="announcementsCarousel"
+        class="carousel slide"
+        data-bs-ride="true"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h6>
+              Último día para pago de exámenes extraordinarios 05 Enero 2024
+            </h6>
+          </div>
+          <div class="carousel-item">
+            <h6>Último día para pago de cursos 05 Enero 2024</h6>
+          </div>
+          <div class="carousel-item">
+            <h6>Último día para pago de inscripciones 05 Enero 2024</h6>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#announcementsCarousel"
+          data-bs-slide="prev"
+          style="opacity: 1"
+        >
+          <span
+            class="carousel-control-prev-icon"
+            style="background-image: none"
+            aria-hidden="true"
+            ><img src="../img/left-arrow--white.svg" alt=""
+          /></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#announcementsCarousel"
+          data-bs-slide="next"
+          style="opacity: 1"
+        >
+          <span
+            class="carousel-control-next-icon"
+            style="background-image: none"
+            aria-hidden="true"
+          >
+            <img src="../img/right-arrow--white.svg" alt="" />
+          </span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary custom-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html"
+            ><img src="../img/logo.png" alt=""
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Institución
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="../institucion/nosotros.html"
+                      >Nosotros</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../institucion/organizacion-escolar.html"
+                      >Organización escolar</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../institucion/normatividad.html"
+                      >Normatividad</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Oferta Educativa
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="./maestria.html">Maestría</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Licenciatura</a></li>
+                  <li>
+                    <a class="dropdown-item" href="./cursos.html"
+                      >Formación Continua</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Vida institucional
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../vida-institucional/eventos.html"
+                      >Eventos</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../vida-institucional/publicaciones.html"
+                      >Publicaciones</a
+                    >
+                  </li>
+                  <!-- <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li> -->
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#"
+                  >Seguimiento escolar</a
+                >
+              </li>
+              <li class="nav-item contact">
+                <a class="nav-link" href="#">Contacto</a>
+              </li>
+            </ul>
+            <div class="custom-navbar__social">
+              <a class="d-inline-block me-2 me-xl-3" href=""
+                ><img src="../img/fb-icon--blue.svg" alt="" /></a
+              ><a href=""><img src="../img/ig-icon--blue.svg" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="hero--secondary hero--secondary--blue">
+        <div class="container">
+          <p>Oferta Educativa</p>
+          <h2>Licenciatura</h2>
+        </div>
+      </section>
+      <section class="masters">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-7 col-xl-8">
+              <div class="masters__content">
+                <h3>Licenciatura en Educación Primaria Plan 2018</h3>
+                <p>
+                  El Plan de Estudios se sustenta en las tendencias más
+                  recientes de la formación docente; en las diversas
+                  perspectivas teórico-metodológicas de las disciplinas que son
+                  objeto de enseñanza en la educación básica y de aquellas que
+                  explican el proceso educativo.
+                </p>
+
+                <p>
+                  Asimismo, se sostiene en los marcos normativos y pedagógicos
+                  establecidos en el Modelo Educativo para la Educación
+                  Obligatoria.
+                </p>
+                <p class="blue">
+                  En los desafíos que enfrenta la formación de maestros en las
+                  Escuelas Normales, en tanto instituciones de educación
+                  superior; en la naturaleza y desarrollo de las prácticas
+                  pedagógicas actuales y las emergentes, ante los nuevos
+                  problemas que el maestro enfrenta como resultado de los
+                  múltiples cambios que en lo social, cultural, económico,
+                  tecnológico y educativo experimenta nuestra sociedad e
+                  impactan de manera notable en el servicio educativo, en las
+                  instituciones y en los propios profesionales de la educación.
+                </p>
+
+                <h5>Servicio social:</h5>
+                <p>
+                  En cumplimiento de la normatividad vigente, el servicio social
+                  que el estudiante normalista prestará a la sociedad como
+                  retribución a la oportunidad de acceso a la educación
+                  superior, se cumplirá a través de las actividades realizadas
+                  en los espacios curriculares correspondientes a las prácticas
+                  profesionales efectuadas en el sexto, séptimo y octavo
+                  semestres, con una duración de 480 horas. Se propone el
+                  desarrollo de actividades profesionales de carácter docente en
+                  las escuelas primarias. Una vez concluido el periodo
+                  establecido, la autoridad de la escuela primaria emitirá la
+                  constancia de cumplimiento del servicio social, la cual será
+                  entregada a la Escuela Normal para expedir la carta de
+                  liberación.
+                </p>
+
+                <h5>Prácticas profesionales:</h5>
+                <p>
+                  Las prácticas profesionales ofrecen la oportunidad de
+                  organizar comunidades de aprendizaje en las que tiene tanto
+                  valor el conocimiento y experiencia del docente de la Escuela
+                  Normal, como del maestro titular de las escuelas primarias y
+                  el estudiante normalista, bajo el supuesto de que el saber y
+                  el conocimiento sólo se movilizan si se colocan en el plano
+                  del diálogo, el debate y el análisis conjunto. De esta manera,
+                  las prácticas profesionales permitirán construir estrategias
+                  de acompañamiento específico por parte de los docentes
+                  formadores y de los maestros de las escuelas primarias. A
+                  través de las prácticas profesionales se establecen los
+                  vínculos con la comunidad, así como con los diferentes agentes
+                  educativos.
+                </p>
+
+                <h5>Modalidades de titulación:</h5>
+                <p>
+                  Las alumnas pueden recibir su título de la licenciatura
+                  desarrolando cualquiera de las tres siguientes modalidades de
+                  titulación: a) El portafolio de evidencias y examen
+                  profesional b) El Informe de prácticas profesionales y examen
+                  profesional c) La Tesis de investigación y examen profesional.
+                  El Portafolio de evidencias y examen profesional Consiste en
+                  la elaboración de un documento que reconstruye el proceso de
+                  aprendizaje del estudiante a partir de un conjunto de
+                  evidencias reflexionadas, analizadas, evaluadas y organizadas
+                  según la relevancia, pertinencia y representatividad respecto
+                  a las competencias genéricas y profesionales establecidas en
+                  el perfil de egreso, con la intención de dar cuenta de su
+                  nivel de logro o desempeño en el ámbito de la profesión
+                  docente. El Informe de prácticas profesionales y examen
+                  profesional Consiste en la elaboración de un informe
+                  analítico-reflexivo del proceso de intervención que realizó en
+                  su periodo de práctica profesional, que se elabora en el
+                  tiempo curricular establecido en el Plan de Estudios vigente,
+                  de tal forma que el proceso de titulación no implica más
+                  tiempo ni recursos, una vez concluidos los estudios
+                  profesionales. La Tesis de investigación y examen profesional
+                  Consiste en la elaboración y desarrollo de un proyecto de
+                  investigación que culminará con la presentación de una tesis
+                  que da cuenta del proceso metodológico realizado y los
+                  resultados obtenidos. Al igual que la opción anterior se lleva
+                  a cabo en el tiempo curricular establecido en el Plan de
+                  Estudios. La estudiante normalista podrá seleccionar el tema
+                  de investigación con base en las problemáticas que haya
+                  detectado en su formación inicial y sobre los cuales pretenda
+                  ampliar su conocimiento.
+                </p>
+
+                <div class="masters__content__files">
+                  <h5>Archivos descargables:</h5>
+                  <a href="http://" target="_blank" rel="noopener noreferrer"
+                    ><img src="../img/file.svg" alt="" />Malla Curricular</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-5 col-xl-4">
+              <div class="masters__details">
+                <p>
+                  <img src="../img/levels-icon--red.svg" alt="" />Nivel de
+                  educación mínimo requerido
+                </p>
+                <p>
+                  <img src="../img/time-icon--red.svg" alt="" />Duración de 6
+                  meses
+                </p>
+                <p>
+                  <img src="../img/students-icon--red.svg" alt="" />Se han
+                  inscrito 300 personas
+                </p>
+                <h5>Curso incluye:</h5>
+                <p>
+                  <img src="../img/check-icon--red.svg" alt="" />Certificado
+                  avalado por la SEP.
+                </p>
+                <p>
+                  <img src="../img/check-icon--red.svg" alt="" />Ulputate eget,
+                  arcu. In enim justo.
+                </p>
+                <p>
+                  <img src="../img/check-icon--red.svg" alt="" />Ulputate eget,
+                  arcu. In enim justo.
+                </p>
+                <p>
+                  <img src="../img/check-icon--red.svg" alt="" />Ulputate eget,
+                  arcu. In enim justo.
+                </p>
+
+                <a href="">
+                  <img src="../img/chat--blue.svg" alt="" srcset="" />
+                  <span class="d-flex flex-column justify-content-center ms-3">
+                    <span>¿Tienes alguna pregunta?</span>
+                    <span>(449) 123 4567</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <!-- Bootstrap JS Files -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"
+  ></script>
+</html>
